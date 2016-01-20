@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <title>Egghead Tutorials</title>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script>
+    angular.module("app",[])
+           .controller("FirstCtrl", function() {
+             var first = this;
+             first.greeting = "first";
+
+           })
+  </script>
+</head>
+
+<body ng-controller="FirstCtrl as first">
+  
+  <input type="text" ng-model="first.greeting">
+  <div ng-class="first.greeting">
+    {{first.greeting}} {{"World"}}
+    
+  </div>
+
+</body>
+</html>
